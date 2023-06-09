@@ -1,4 +1,6 @@
 [
+  "\"AlertEvent.info\"",
+  "\"Astounding\"",
   "\"AlertEvent.noInternetAccess\"",
   "\"We were unable to access the internet. Try again later when you have a more stable internet connection.\"",
   "\"AlertEvent.error\"",
@@ -7,6 +9,10 @@
   "\"We were unable to access the internet. Try again later when you have a more stable internet connection.\"",
   "\"AlertEvent.error\"",
   "\"Amazing\"",
+  "\"AlertEvent.alert\"",
+  "\"Cool\"",
   "\"AlertEvent.noInternetAccess\"",
-  "\"We were unable to access the internet. Try again later when you have a more stable internet connection.\""
+  "\"We were unable to access the internet. Try again later when you have a more stable internet connection.\"",
+  "\"AlertEvent.info\"",
+  "\"Incredible\""
 ]

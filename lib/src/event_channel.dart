@@ -18,6 +18,11 @@ extension AlertEventChannel on BlocEventChannel {
     fireEvent(AlertEvent.warning.event, message);
   }
 
+  /// Fires the [AlertEvent.info] event up the event channel with [message]
+  void fireInfo(String message) {
+    fireEvent(AlertEvent.info.event, message);
+  }
+
   /// Fires the [AlertEvent.error] event up the event channel with [message]
   void fireError(String message) {
     fireEvent(AlertEvent.error.event, message);

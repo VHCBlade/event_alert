@@ -6,6 +6,10 @@ enum AlertEvent<T> {
   /// errors, such as a notification that a download has finished.
   alert<String>('Alert'),
 
+  /// For things the user needs to know about, typically from something
+  /// the user initiated.
+  info<String>('Info'),
+
   /// For errors that the user needs to know about immediately.
   error<String>('Error'),
 

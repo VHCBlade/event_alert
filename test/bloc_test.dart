@@ -19,6 +19,7 @@ void alertBlocTest() {
           ..addTestValue(event.message),
       );
 
+      bloc.eventChannel.fireInfo('Astounding');
       bloc.eventChannel.fireNoInternet();
       bloc.eventChannel.fireError('Cool');
       bloc.eventChannel.fireNoInternet();
@@ -26,6 +27,7 @@ void alertBlocTest() {
       bloc.eventChannel.fireError('Amazing');
       bloc.eventChannel.fireAlert('Cool');
       bloc.eventChannel.fireNoInternet();
+      bloc.eventChannel.fireInfo('Incredible');
 
       await Future<void>.delayed(const Duration(milliseconds: 50));
     },

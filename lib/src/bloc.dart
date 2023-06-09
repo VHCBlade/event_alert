@@ -22,8 +22,7 @@ class AlertBloc extends Bloc {
   /// Add this up the widget tree and listen to the [stream] to receive the
   /// alerts.
   ///
-  /// Specifically only listens to [AlertEvent.error] and
-  /// [AlertEvent.noInternetAccess]
+  /// Specifically doesn't listen [AlertEvent.warning]
   AlertBloc({required super.parentChannel}) {
     eventChannel
       ..addEventListener(
@@ -38,6 +37,14 @@ class AlertBloc extends Bloc {
       ..addEventListener(
         AlertEvent.error.event,
         (event, value) => _stream.sink.add(AlertInfo(AlertEvent.error, value)),
+      )
+      ..addEventListener(
+        AlertEvent.info.event,
+        (event, value) => _stream.sink.add(AlertInfo(AlertEvent.info, value)),
+      )
+      ..addEventListener(
+        AlertEvent.alert.event,
+        (event, value) => _stream.sink.add(AlertInfo(AlertEvent.alert, value)),
       );
   }
 
