@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Added LoadingStatus and WithLoadingStatus
+
 ## 0.1.1
 
 * Added AlertEvent.info

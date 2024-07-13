@@ -1,6 +1,6 @@
 name: event_alert
 description: A Flutter package project for handling alerts using event_bloc.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/VHCBlade/event_alert
 
 environment:
@@ -8,7 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  event_bloc: ^4.2.0
+  event_bloc: ^4.7.0
 
   flutter:
     sdk: flutter
@@ -18,6 +18,6 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^4.0.0
+  very_good_analysis: ^5.0.0
 
 flutter:

@@ -7,10 +7,19 @@ import 'package:flutter/material.dart';
 /// Automatically handles alerts from the stream of [AlertBloc]
 class AlertWatcher extends StatefulWidget {
   /// Automatically handles alerts from the stream of [AlertBloc]
-  const AlertWatcher({required this.child, super.key});
+  const AlertWatcher({
+    required this.child,
+    required this.alertDialogBuilder,
+    super.key,
+  });
 
   /// The child
   final Widget child;
+
+  /// If specified, this will be used to create the alert dialog
+  /// rather than the default.
+  final Widget Function(BuildContext context, AlertInfo info)?
+      alertDialogBuilder;
 
   @override
   State<AlertWatcher> createState() => _AlertWatcherState();
@@ -25,7 +34,9 @@ class _AlertWatcherState extends State<AlertWatcher> {
     subscription = context.readBloc<AlertBloc>().stream.listen(
           (event) => showDialog<void>(
             context: context,
-            builder: (_) => AlertInfoDialog(info: event),
+            builder: (context) => widget.alertDialogBuilder != null
+                ? widget.alertDialogBuilder!(context, event)
+                : AlertInfoDialog(info: event),
           ),
         );
   }

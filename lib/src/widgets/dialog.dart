@@ -19,7 +19,7 @@ class AlertInfoDialog extends StatelessWidget {
         ElevatedButton(
           onPressed: Navigator.of(context).pop,
           child: const Text('OK'),
-        )
+        ),
       ],
     );
   }
