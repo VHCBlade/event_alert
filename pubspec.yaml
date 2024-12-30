@@ -1,6 +1,6 @@
 name: event_alert
 description: A Flutter package project for handling alerts using event_bloc.
-version: 0.1.2
+version: 0.1.3
 homepage: https://github.com/VHCBlade/event_alert
 
 environment:

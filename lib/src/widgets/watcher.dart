@@ -32,12 +32,14 @@ class _AlertWatcherState extends State<AlertWatcher> {
   void initState() {
     super.initState();
     subscription = context.readBloc<AlertBloc>().stream.listen(
-          (event) => showDialog<void>(
-            context: context,
-            builder: (context) => widget.alertDialogBuilder != null
-                ? widget.alertDialogBuilder!(context, event)
-                : AlertInfoDialog(info: event),
-          ),
+          (event) => mounted
+              ? showDialog<void>(
+                  context: context,
+                  builder: (context) => widget.alertDialogBuilder != null
+                      ? widget.alertDialogBuilder!(context, event)
+                      : AlertInfoDialog(info: event),
+                )
+              : null,
         );
   }
 

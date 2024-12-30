@@ -98,7 +98,7 @@ mixin WithLoadingStatus on Bloc {
     } else {
       eventChannel.fireError('An unexpected error has occurred');
     }
-    eventChannel.fireEvent(
+    eventChannel.eventBus.fireEvent(
       ErrorEvent.unexpectedError.event,
       TrackedError(
         error: exception,
